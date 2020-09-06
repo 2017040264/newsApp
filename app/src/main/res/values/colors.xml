@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#E4C4081E</color>
+
+    <!--添加颜色-->
+    <color name="colorRed">#F00</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorGray">#DCDCDC</color>
+    <color name="green">#06E21C</color>
+    <color name="grey">#41DDC6</color>
+    <color name="grey1">#A3A0A0</color>
+    <color name="txtgrey">#7c7b7b</color>
+    <color name="greywhite">#aeacac</color>
+    <color name="mainColor">#4dc445</color>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--ifRoom表示屏幕空间足够的情况下显示在toolbar中，不够的话就显示在菜单中
+    -->
+
+    <item android:id="@+id/news_commit"
+        android:title="评论"
+        android:icon="@drawable/nav_edit"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="0"/>
+    <item android:id="@+id/news_collect" android:title="收藏"
+        android:icon="@drawable/ic_star_border_favourite_no"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"/>
+
+</menu>

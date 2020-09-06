@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--自适应调节，加强版本FrameLayout-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_webView"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--嵌入一个浏览器-->
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </WebView>
+
+            <LinearLayout
+                android:id="@+id/rl_enroll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:background="@color/txtgrey">
+
+                <ImageView
+                    android:id="@+id/comment"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/comment"
+                    android:layout_weight="1"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/comment"
+                    android:background="@color/grey1" />
+
+                <ImageView
+                    android:id="@+id/chat"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/ic_star_border_favourite_no"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <!--
+                        layout_marginTop 指定该属性所在控件距上部最近控件的最小值；
+                        layout_marginBottom 指定该属性所在控件距下部最近控件的最小值；-->
+            <ListView
+                android:id="@+id/comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorWhite"
+                android:visibility="gone" />
+
+            <!--<androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>-->
+
+            <RelativeLayout
+                android:id="@+id/rl_comment"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorWhite"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/hide_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:drawableBottom="@drawable/hide_dowm"
+                    android:text="@string/hide_down"
+                    android:textColor="@color/txtgrey"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/hide_down"
+                    android:background="@color/grey" />
+                <EditText
+                    android:id="@+id/comment_content"
+                    android:hint="@string/comment_content"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:layout_width="240dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_toRightOf="@id/hide_down"
+                    android:layout_marginLeft="20dp"/>
+                <Button
+                    android:id="@+id/comment_send"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/mainColor"
+                    android:text="@string/send"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
